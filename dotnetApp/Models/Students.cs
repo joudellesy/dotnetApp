@@ -10,9 +10,13 @@ namespace dotnetApp.Models
     {
         [Key]
         public int StudentId { get; set; }
+        [Required]
         public string Name { get; set; }
+        [Required]
         public string Address{ get; set; }
+        [Required]
         public string Section{ get; set; }
+        [Required]
         public DateTime EnrolledDate{ get; set; }
         public DateTime DateCreated{ get; set; }
 

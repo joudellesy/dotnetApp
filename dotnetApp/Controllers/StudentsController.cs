@@ -50,7 +50,7 @@ namespace dotnetApp.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult SaveOrEdit(int studentId, [Bind("StudentsId,Name,Section,Address,EnrolledDate")]
+        public IActionResult SaveOrEdit(int studentId, [Bind("StudentId,Name,Section,Address,EnrolledDate")]
         Students studentsData)
         {
             bool IsStudentExist = false;
