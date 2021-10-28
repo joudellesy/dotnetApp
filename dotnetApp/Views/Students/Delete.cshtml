@@ -1,0 +1,46 @@
+﻿@model dotnetApp.Models.Students
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Deleting Student</h2>
+
+<h3>Would you like to continue?</h3>
+<div class="container p-3 my-3 border">
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.Section)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.Section)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.EnrolledDate)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.EnrolledDate)
+        </dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="StudentId" />
+        <input  type="submit" value="Yes" />
+        <a  asp-action="Index">No</a>
+    </form>
+
+</div>
