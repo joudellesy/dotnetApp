@@ -48,7 +48,6 @@ namespace dotnetApp.Controllers
             }
         }
 
-        //AddOrEdit Post Method
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult SaveOrEdit(int studentId, [Bind("StudentsId,Name,Section,Address,EnrolledDate")]
@@ -116,7 +115,6 @@ namespace dotnetApp.Controllers
             return View(student);
         }
 
-        // POST: Employees/Delete/1
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Delete(int studentId)
